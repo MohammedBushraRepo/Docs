@@ -17,5 +17,10 @@ samples, guidance on mobile development, and a full API reference.
 
 
 
-to run flutter native4 Splash
+to run flutter native4 Splash : 
+
+
 dart run flutter_native_splash:create --path=flutter_native_splash.yaml
+
+
+dart run build_runner build --delete-conflicting-outputs
