@@ -4,7 +4,7 @@ import 'core/routing/app_router.dart';
 import 'doc_app.dart';
 void main() {
 
-  setupGetIt();
+  setupGetIt(); // for dependancy injection
   runApp(DocApp(
     appRouter: AppRouter(),
   ),); 
