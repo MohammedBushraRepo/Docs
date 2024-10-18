@@ -1,4 +1,3 @@
-
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -11,20 +10,20 @@ class LoginResponse {
   bool? status;
   int? code;
 
-  LoginResponse({this.message , this.userData , this.status,this.code});
-  factory LoginResponse.fromJson(Map<String , dynamic> json) => _$LoginResponseFromJson(json);
+  LoginResponse({this.message, this.userData, this.status, this.code});
+  factory LoginResponse.fromJson(Map<String, dynamic> json) =>
+      _$LoginResponseFromJson(json);
 }
 
-
-
 @JsonSerializable()
-class UserData{
-  String? token;
+class UserData {
+  String token;
 
-  @JsonKey(name : 'data')
+  @JsonKey(name: 'data')
   String? userName;
 
-  UserData({this.token , this.userName});
-  
-  factory UserData.fromJson(Map<String , dynamic> json) => _$UserDataFromJson(json);
+  UserData({required this.token, this.userName});
+
+  factory UserData.fromJson(Map<String, dynamic> json) =>
+      _$UserDataFromJson(json);
 }

@@ -1,4 +1,5 @@
 import 'package:docs/core/di/dependency_injection.dart';
+import 'package:docs/features/home/logic/home_cubit.dart';
 import 'package:docs/features/home/ui/home_screen.dart';
 import 'package:docs/features/login/logic/cubit/login_cubit.dart';
 import 'package:docs/features/login/ui/login_screen.dart';
@@ -10,7 +11,7 @@ import 'package:docs/core/routing/routes.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AppRouter {
-  Route generateRoute(RouteSettings settings) {
+  Route? generateRoute(RouteSettings settings) {
     //this arguments to be passed in any screen like this ( arguments as ClassName )
     final arguments = settings.arguments;
 
@@ -26,7 +27,7 @@ class AppRouter {
                   create: (context) => getIt<LoginCubit>(),
                   child: const LoginScreen(),
                 ));
-       case Routes.SignUpScreen:
+      case Routes.SignUpScreen:
         return MaterialPageRoute(
           builder: (_) => BlocProvider(
             create: (context) => getIt<SignupCubit>(),
@@ -36,18 +37,21 @@ class AppRouter {
       case Routes.homeScreen:
         return MaterialPageRoute(
           builder: (_) => BlocProvider(
-            create: (context) => getIt<LoginCubit>(),
+            create: (context) => HomeCubit(
+              getIt()..getSpecialization(),
+            ),
             child: const HomeScreen(),
           ),
         );
       default:
-        return MaterialPageRoute(
-          builder: (_) => Scaffold(
-            body: Center(
-              child: Text('No route defined for ${settings.name}'),
-            ),
-          ),
-        );
+        // return MaterialPageRoute(
+        //   builder: (_) => Scaffold(
+        //     body: Center(
+        //       child: Text('No route defined for ${settings.name}'),
+        //     ),
+        //   ),
+        // );
+        return null; // Return null if no route is defined for the provided name.
     }
   }
 }
