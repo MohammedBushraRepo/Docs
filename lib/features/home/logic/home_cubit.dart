@@ -3,9 +3,7 @@ import '../data/repos/home_repo.dart';
 import 'home_state.dart';
 
 class HomeCubit extends Cubit<HomeState> {
- 
   final HomeRepo _homeRepo;
-
   HomeCubit(this._homeRepo) : super(const HomeState.initial());
 
   void getSpecializations() async {

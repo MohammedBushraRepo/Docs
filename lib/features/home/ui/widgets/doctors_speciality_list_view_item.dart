@@ -31,7 +31,7 @@ class DoctorsSpecialityListViewItem extends StatelessWidget {
           verticalSpace(8),
           Text(
             specializationsData?.name ?? 'Specialization',
-            style: TextStyles.font12BlueRegular,
+            style: TextStyles.font12DarkBlueRegular,
           ),
         ],
       ),

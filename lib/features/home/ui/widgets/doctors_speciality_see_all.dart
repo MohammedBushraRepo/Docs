@@ -1,4 +1,3 @@
-import 'package:docs/core/helpers/spacing.dart';
 import 'package:docs/core/theming/styles.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +17,6 @@ class DoctorsSpecialitySeeAll extends StatelessWidget {
           'See All',
           style: TextStyles.font12BlueRegular,
         ),
-     
       ],
     );
   }
