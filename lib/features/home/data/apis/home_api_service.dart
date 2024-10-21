@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
+import 'package:docs/core/networking/api_constants.dart';
 import 'package:retrofit/retrofit.dart';
 
-import '../../../../core/networking/api_constants.dart';
 import '../models/specializations_response_model.dart';
 import 'home_api_constants.dart';
 
