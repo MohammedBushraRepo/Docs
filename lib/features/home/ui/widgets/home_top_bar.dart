@@ -1,8 +1,8 @@
 import 'package:docs/core/theming/colors.dart';
-import 'package:docs/core/theming/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
+
+import '../../../../core/theming/styles.dart';
 
 class HomeTopBar extends StatelessWidget {
   const HomeTopBar({super.key});
@@ -15,11 +15,11 @@ class HomeTopBar extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Hii, Mohammed',
+              'Hi, Omar!',
               style: TextStyles.font18DarkBlueBold,
             ),
             Text(
-              'How are you today',
+              'How Are you Today?',
               style: TextStyles.font12GrayRegular,
             ),
           ],
@@ -28,7 +28,9 @@ class HomeTopBar extends StatelessWidget {
         CircleAvatar(
           radius: 24.0,
           backgroundColor: ColorsManager.moreLighterGray,
-          child: SvgPicture.asset('assets/svgs/notifications.svg'),
+          child: SvgPicture.asset(
+            'assets/svgs/notifications.svg',
+          ),
         )
       ],
     );
