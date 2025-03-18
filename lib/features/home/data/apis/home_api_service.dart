@@ -3,7 +3,7 @@ import 'package:docs/core/networking/api_constants.dart';
 import 'package:retrofit/retrofit.dart';
 
 import '../models/specializations_response_model.dart';
-import 'home_api_constants.dart';
+import 'home_api_constants_old.dart';
 
 part 'home_api_service.g.dart';
 
@@ -11,6 +11,6 @@ part 'home_api_service.g.dart';
 abstract class HomeApiService {
   factory HomeApiService(Dio dio) = _HomeApiService;
 
-  @GET(HomeApiConstants.specializationEP)
+  @GET(ApiConstants.specializationEP)
   Future<SpecializationsResponseModel> getSpecialization();
 }
